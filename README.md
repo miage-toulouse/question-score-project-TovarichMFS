@@ -8,6 +8,7 @@
 - [ ] 3
 
 
+
 ### 0. Création et initialisation du projet Maven "question-score-project"
 
 Créez un compte sur la plateforme Github si ce n'est pas déjà fait.  
