@@ -17,12 +17,16 @@ public class QuestionAChoixExclusifTest {
 
     @Test
     public void testGetEnonce() {
-        assertEquals("L'énoncé ne correspond pas!","LOL?",q.getEnonce());
+        //when : on demande l'énoncé de la question
+        String resEnonce = q.getEnonce();
+        //then : on vérifie l'énoncé retoruné avec l'énoncé fourni
+        assertEquals("L'énoncé ne correspond pas!","LOL?",resEnonce);
     }
 
     @Test
     public void testGetScoreForIndice() {
-        assertEquals("Le score ne correspond pas!",100,q.getScoreForIndice(3),0.0);
-        assertThat("Le score ne devrait pas correspondre!",100.0f,not(equalTo(q.getScoreForIndice(1))));
+        float score = 100;
+        assertEquals("Le score ne correspond pas!",score,q.getScoreForIndice(3),0.0);
+        assertThat("Le score ne devrait pas correspondre!",score,not(equalTo(q.getScoreForIndice(1))));
     }
 }
