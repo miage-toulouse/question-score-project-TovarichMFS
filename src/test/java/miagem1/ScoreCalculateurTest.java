@@ -34,5 +34,17 @@ public class ScoreCalculateurTest {
         reponses.add(3);
         reponses.add(5);
         assertEquals("3: Le score maximal ne correspond pas!",100,sc.calculeScore(reponses,qM),0.01);
+        reponses = new ArrayList<Integer>();
+        reponses.add(1);
+        reponses.add(2);
+        reponses.add(3);
+        assertEquals("4: Le score ne correspond pas!",16.66,sc.calculeScore(reponses,qM),0.01);
+        reponses = new ArrayList<Integer>();
+        reponses.add(1);
+        reponses.add(2);
+        reponses.add(3);
+        reponses.add(4);
+        reponses.add(5);
+        assertEquals("5: Le score ne correspond pas!",0,sc.calculeScore(reponses,qM),0.01);
     }
 }

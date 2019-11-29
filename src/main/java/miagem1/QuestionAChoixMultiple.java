@@ -37,7 +37,7 @@ public class QuestionAChoixMultiple implements QuestionAChoix {
     public float getScoreForIndice(int indiceChoix) {
         if (indicesBonnesReponses.contains(indiceChoix)) {
             return 100f/((float)(indicesBonnesReponses.size()));
-        }
-        return 0;
+        }else
+            return -50;
     }
 }
