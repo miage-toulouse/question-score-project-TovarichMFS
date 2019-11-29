@@ -29,9 +29,15 @@ public class QuestionAChoixMultipleTest {
     }
 
     @Test
-    public void getScoreForIndice() {
+    public void getScoreForIndiceBonneReponse() {
         float score = 100/2;
         assertEquals("Le score ne correspond pas!",score,q.getScoreForIndice(2),0.0);
+
+    }
+
+    @Test
+    public void getScoreForIndiceMauvaiseReponse() {
+        float score = 100/2;
         assertThat("Le score ne devrait pas correspondre!",score,not(equalTo(q.getScoreForIndice(8))));
 
     }

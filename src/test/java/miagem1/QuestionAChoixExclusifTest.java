@@ -24,9 +24,14 @@ public class QuestionAChoixExclusifTest {
     }
 
     @Test
-    public void testGetScoreForIndice() {
+    public void testGetScoreForIndiceBonneReponse() {
         float score = 100;
-        assertEquals("Le score ne correspond pas!",score,q.getScoreForIndice(3),0.0);
+        assertThat("Le score ne devrait pas correspondre!",score,not(equalTo(q.getScoreForIndice(1))));
+    }
+
+    @Test
+    public void testGetScoreForIndiceMauvaiseReponse() {
+        float score = 100;
         assertThat("Le score ne devrait pas correspondre!",score,not(equalTo(q.getScoreForIndice(1))));
     }
 }
